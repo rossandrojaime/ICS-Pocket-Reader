@@ -1,0 +1,99 @@
+<RelativeLayout
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_blue"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/header_title"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp" />
+
+    <EditText android:id="@+id/search_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_search"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/header_title"
+        android:layout_alignRight="@+id/header_title"
+        android:layout_alignEnd="@+id/header_title"
+        android:layout_marginRight="75dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_search"
+        android:background="@drawable/button_search_image"
+        android:onClick="displaySearch"
+        android:layout_alignTop="@+id/search_bar"
+        android:layout_alignRight="@+id/header_title"
+        android:layout_alignEnd="@+id/header_title"
+        android:layout_alignBottom="@+id/search_bar"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/frame_course0"
+            android:background="@drawable/bg_frame"
+            android:layout_below="@+id/search_bar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Course List"
+                android:id="@+id/course_list_txt"
+                android:layout_marginTop="50dp"
+                android:textSize="25dp"
+                android:textIsSelectable="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Course 1"
+                android:id="@+id/course1_button"
+                android:textSize="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/course_list_txt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:onClick="displayFiles"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Course 2"
+                android:id="@+id/course2_button"
+                android:layout_below="@+id/course1_button"
+                android:layout_centerHorizontal="true"
+                android:textSize="10dp"
+                android:onClick="displayFiles"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Course 3"
+                android:id="@+id/course3_button"
+                android:layout_below="@+id/course2_button"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="10dp"
+                android:onClick="displayFiles"/>
+
+
+        </RelativeLayout>
+
+</RelativeLayout>
